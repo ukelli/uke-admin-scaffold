@@ -1,0 +1,31 @@
+@import "ukelli-ui/style/var.scss";
+
+/*
+ * color config
+ */
+
+$themeColor: $blue;
+
+$mainBgColor: #f7f7f7;
+
+$navMenuBgColor: #1d2939;
+$containerBgColor: $navMenuBgColor;
+$navMenuWidth: 220px;
+$navMenuCollapseWidth: 36px;
+$navMenuItemBorderColor: #777;
+$navMenuItemActiveTextColor: #000;
+
+/*
+ * Scroll bar style
+ */
+$lightThemeScrollBg: rgba(0, 0, 0, 0.2);
+$lightThemeScrollThumb: rgba(0, 0, 0, 0.3);
+$lightThemeScrollThumbHover: $themeColor;
+$lightThemeScrollThumbActive: darken($themeColor, 5%);
+
+$darkThemeScrollBg: $gray;
+$darkThemeScrollThumb: rgba(80, 80, 80, 0.8);
+$darkThemeScrollThumbHover: darken($darkThemeScrollThumb, 3%);
+$darkThemeScrollThumbActive: darken($darkThemeScrollThumb, 5%);
+
+$borderRadius: 4px;

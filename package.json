@@ -1,0 +1,76 @@
+{
+  "name": "uke-admin-web-scaffold",
+  "version": "1.2.1",
+  "main": "./index.js",
+  "files": [
+    "*"
+  ],
+  "scripts": {
+    "publish:ts": "npm publish ./dist",
+    "release": "npm run build:ts; npm run publish:ts",
+    "build:ts": "rm -rf ./dist; tsc; npm run copy-files-ts; npm run copy-style",
+    "copy-files-ts": "node ./scripts/copy-files-ts",
+    "gen:version": "vh gen",
+    "copy-style": "cp -R ./style ./dist/",
+    "test": "jest",
+    "docz:dev": "docz dev",
+    "docz:build": "NODE_ENV=production docz build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SANGET/uke-admin-web-scaffold.git"
+  },
+  "description": "Base on React's Admin Manager Scaffold.",
+  "peerDependencies": {
+    "basic-helper": "^3.0.x",
+    "cross-env": "^5.1.6",
+    "mousetrap": "^1.6.1",
+    "prop-types": "^15.5.10",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-transition-group": "^2.5.0",
+    "uke-request": "^1.0.x",
+    "ukelli-ui": "^3.3.x",
+    "version-helper": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "basic-helper": "^3.0.6",
+    "codemirror": "^5.42.2",
+    "docz": "^1.2.0",
+    "docz-plugin-css": "^0.11.0",
+    "docz-plugin-netlify": "^1.1.4",
+    "docz-theme-default": "^1.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-loader": "3.0.2",
+    "eslint-plugin-flowtype": "4.3.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "fs-extra": "^7.0.0",
+    "jest": "^24.5.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.0",
+    "react-transition-group": "^4.0.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "3.6.4",
+    "uke-request": "^1.1.0",
+    "ukelli-ui": "^3.3.0-rc1",
+    "unistore": "^3.1.0",
+    "version-helper": "^1.1.0"
+  },
+  "author": "Alex",
+  "license": "MIT",
+  "dependencies": {
+    "history": "^4.7.2",
+    "mousetrap": "^1.6.3",
+    "utility-types": "^3.7.0"
+  }
+}

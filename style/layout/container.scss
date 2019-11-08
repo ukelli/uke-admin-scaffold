@@ -1,0 +1,215 @@
+@import '../mixin/theme.scss';
+
+$userInfoItemOverBgColor: #f7f7f7;
+
+.table-render-container {
+  position: relative;
+  top: 0;
+  padding-top: 0.1px;
+  .table-container {
+    overflow: auto;
+  }
+}
+
+.card,.card-content {
+  background-color: #FFF;
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+}
+
+.main-bg-color {
+  background-color: $mainBgColor;
+  // background-repeat: no-repeat;
+}
+.main-container {
+  background-color: rgba($mainBgColor, 0.5);
+  // border-top: 2px solid $themeColor;
+  @include themeGen();
+}
+
+.manager-container {
+  background-color: #fff;
+}
+
+.manager-container {
+  @include layout();
+  align-items: stretch;
+}
+
+.fix-group {
+  background-color: #FFF;
+  padding: 10px;
+}
+
+.pages-container {
+  >.common-mode {
+    padding: 0 10px 10px;
+    position: relative;
+  }
+}
+
+.pages-container {
+  overflow-y: auto;
+  @include fill();
+  left: $navMenuWidth;
+  transition: all 0.2s ease;
+  // background-color: $mainBgColor;
+  // background-color: #e4e7ea;
+  border-radius: 0 0 0 4px;
+
+  &.hide-menu {
+    left: $navMenuCollapseWidth;
+  }
+  .top-tab-wrapper {
+    >.tab-content {
+      // box-shadow: 0 4px 10px rgba(#000, 0.05);
+      .tabs-container {
+        background-color: transparent;
+        .tab-group {
+          background-color: #fefefe;
+          box-shadow: none;
+          border-top: 1px solid #EEE;
+          .tab {
+            border-bottom: 1px solid transparent;
+            margin-right: 0;
+            &.active {
+              border-color: $themeColor;
+              background-color: #fefefe;
+            }
+            .tab-label {
+              padding: 6px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page-content {
+    padding: 0.1px 10px;
+    overflow-y: auto;
+    border-radius: 0 5px 5px;
+    .content {
+      padding: 0.01px;
+    }
+    .tabs-container {
+      padding-top: 10px !important;
+      min-height: 70vh;
+    }
+  }
+  .hide-component {
+    position: relative;
+    z-index: 101;
+    &:hover {
+      .hide-content {
+        display: block;
+      }
+    }
+    .hide-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      background-color: #fff;
+      box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+      width: 300%;
+      padding: 10px;
+    }
+  }
+  .page-router {
+    padding: 0 10px;
+    .tab {
+      position: relative;
+      display: inline-block;
+      background-color: #f3f3f3;
+      box-shadow: inset 0 -3px 3px rgba(#000, 0.1);
+      padding: 5px 20px;
+      margin-right: 5px;
+      .text {
+        display: inline-block;
+        cursor: pointer;
+        transition: all ease 0.2s;
+      }
+      .close-btn {
+        position: absolute;
+        right: -2px;
+        top: 3px;
+        z-index: 4;
+        background-color: transparent;
+        color: #333;
+        // display: none;
+        opacity: 0;
+        transition: all ease 0.2s;
+        transform: translateX(3px);
+
+        &:hover {
+          color: $dangerColor;
+          transform: rotate(18deg);
+        }
+      }
+      &.active {
+        background-color: #fff;
+        // border-color: $themeColor;
+        box-shadow: 0 -1px 1px rgba(#555, 0.1);
+      }
+      &:hover {
+        .text {
+          transform: translateX(-3px);
+        }
+        .close-btn {
+          opacity: 1;
+          transform: translateX(-2px);
+        }
+      }
+    }
+  }
+  .content {
+    // height: 100%;
+    .table-content {
+      // height: 90%;
+      .sub-content {
+        height: 80vh;
+        overflow: auto;
+      }
+    }
+  }
+
+  .pagin-con,
+  .table-container,
+  .condition-group {
+    border-bottom: none;
+  }
+
+  .FEDEPLOY .icon-input {
+    width: 480px;
+  }
+}
+
+.theme-changer {
+  padding: 8px 20px;
+  .item {
+    display: inline-block;
+    // border: 1px solid #EEE;
+    box-shadow: 0 2px 3px rgba(#000, 0.1);
+    margin-right: 5px;
+    border-radius: 3px;
+    &.active {
+      box-shadow: 0 3px 4px rgba(#000, 0.2);
+      padding: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1441px) {
+  .pages-container .uke-status-bar .user-info-group {
+    max-width: 46%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .pages-container .uke-status-bar .user-info-group {
+    max-width: 38%;
+  }
+}

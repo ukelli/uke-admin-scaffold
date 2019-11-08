@@ -1,0 +1,24 @@
+// 重定义 UI 库的样式
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.vertical-form {
+  .form-group {
+    text-align: left;
+    color: #555;
+  }
+}
+
+.tabs-container {
+  margin: 0 !important;
+}
+
+img {
+  max-width: 100%;
+}
