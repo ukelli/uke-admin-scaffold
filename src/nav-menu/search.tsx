@@ -24,8 +24,8 @@ const ESC_KEY = 27;
 
 const ShortcutTipDesc = ({ $T }) => {
   return (
-    <div style={{ width: 240 }}>
-      <h5>{$T('菜单搜索')}</h5>
+    <div>
+      <div>{$T('菜单搜索')}</div>
       {$T('快捷键')}：alt + s
       {/* <br />
       {$T('输入菜单名首字母快速查找')}
@@ -108,7 +108,7 @@ export default class SearchBox extends Component<SearchBoxProps> {
       }}>
         <React.Fragment>
           <ToolTip
-            position="top"
+            position="right"
             title={(
               <ShortcutTipDesc $T={this.props.$T} />
             )}

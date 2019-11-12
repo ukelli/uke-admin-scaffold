@@ -457,7 +457,7 @@ export default class NavMenu extends Component<NavMenuProps, {
                 codeMapper={menuCodeMapper}
                 showMenu={show}/>
               <ToolTip
-                position="top"
+                position="right"
                 title={$T('切换到') + $T(!flowMode ? '悬浮' : '传统') + $T('模式')}
                 classNames={['_action-btn']}
                 className="p10"
@@ -465,6 +465,7 @@ export default class NavMenu extends Component<NavMenuProps, {
                 n={flowMode ? "bars" : "bolt"}/>
               <span className="flex" />
               <ToolTip
+                position="right"
                 onClick={() => onToggleNav(!show)}
                 title={`${$T(show ? "收起" : "展开")}${$T('菜单')}（${$T('快捷键')}：alt + alt）'`}
                 n={!show ? "greater-than" : "less-than"}/>
